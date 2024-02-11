@@ -1,0 +1,14 @@
+name: main
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deployment:
+    uses: './.github/workflows/sub.yml'
+    with:
+      name: 'from main'
+    secrets:
+      MY_SECRET: password
